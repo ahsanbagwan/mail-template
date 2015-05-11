@@ -27,10 +27,14 @@ public class Template {
 			result = result.replaceAll(regex, entry.getValue());
 		}
 		
-		if (result.matches(".*\\$\\{.+\\}.*")) {
-			throw new MissingValueException();
-		}
+		checkForMissingValues(result);
 		
 		return result;
+	}
+	
+	private void checkForMissingValues(String result) {
+		if (result.matches(".*\\$\\{.+\\}.*")) {
+			throw new MissingValueException();
+		}	
 	}
 }
