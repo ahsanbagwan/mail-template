@@ -6,8 +6,8 @@ public class MissingValueException extends RuntimeException {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MissingValueException(String exception) {
-		super(exception);
+	public MissingValueException(String message) {
+		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
